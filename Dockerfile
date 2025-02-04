@@ -1,16 +1,16 @@
-FROM nginx:alpine
+FROM node:alpine
 
-# Install curl for healthcheck
-RUN apk add --no-cache curl
+# Create app directory
+WORKDIR /app
+
+# Install serve
+RUN npm install -g serve
 
 # Copy application files
-COPY . /usr/share/nginx/html/
-
-# Copy nginx configuration
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY . .
 
 # Expose port
 EXPOSE 80
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start serve
+CMD ["serve", "-s", ".", "-l", "80"]
