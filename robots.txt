@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://aimentory.com.br/sitemap.xml
+
+# Otimização para crawlers
+Crawl-delay: 10
