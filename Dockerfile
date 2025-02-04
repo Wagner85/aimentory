@@ -1,4 +1,7 @@
-FROM nginx:stable-slim
+FROM nginx:alpine
+
+# Install curl for healthcheck
+RUN apk add --no-cache curl
 
 # Copy application files
 COPY . /usr/share/nginx/html/
@@ -6,12 +9,12 @@ COPY . /usr/share/nginx/html/
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Set environment variable to disable aio
-ENV NGINX_ENTRYPOINT_QUIET_LOGS=1
-ENV NGINX_WORKER_PROCESSES=1
-
 # Expose port
 EXPOSE 80
+
+# Configure healthcheck
+HEALTHCHECK --interval=30s --timeout=3s \
+    CMD curl -f http://localhost/health || exit 1
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
