@@ -1,16 +1,13 @@
-FROM node:alpine
+FROM busybox:latest
 
-# Create app directory
-WORKDIR /app
+# Create directory for web files
+WORKDIR /var/www/html
 
-# Install serve
-RUN npm install -g serve
-
-# Copy application files
+# Copy all web files
 COPY . .
 
-# Expose port
+# Expose port 80
 EXPOSE 80
 
-# Start serve
-CMD ["serve", "-s", ".", "-l", "80"]
+# Start busybox httpd
+CMD ["httpd", "-f", "-v", "-p", "80", "-h", "/var/www/html"]
