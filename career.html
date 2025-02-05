@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Career Mentory - Mentoria Personalizada em carreira com IA. Receba orientações personalizadas e suporte 24/7 para sua carreira.">
+    <meta name="keywords" content="mentoria carreira, inteligência artificial, AI mentoring, carreira, desenvolvimento profissional">
+    <meta name="author" content="AI Mentory">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Career Mentory - Mentoria em Carreira com IA">
+    <meta property="og:description" content="Mentoria Personalizada em carreira potencializada por IA. Receba orientações personalizadas 24/7.">
+    <meta property="og:image" content="images/logo.PNG">
+    <meta property="og:url" content="https://aimentory.com.br/career">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Segurança -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <title>Career Mentory - Mentoria em Carreira com IA</title>
+    <link rel="canonical" href="https://aimentory.com.br/career">
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: #000;
+        }
+        .logo img {
+            height: 40px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .social-links a {
+            color: #fff;
+            margin-left: 1rem;
+            text-decoration: none;
+        }
+        .chat-icon {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+        .cta-button {
+            background: #fff;
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .main-content {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        .title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            color: #888;
+        }
+        .chat-container {
+            background: #111;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        .benefit-card {
+            background: #111;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .benefit-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .title {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        .dark-theme {
+            background-color: #000;
+            color: #fff;
+        }
+        .main-header {
+            background-color: #000;
+            padding: 1rem 2rem;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hero {
+            background: #000;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 2rem 0;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #888;
+        }
+        .chat-section {
+            background-color: #111;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .benefits {
+            padding: 4rem 0;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .benefit-item {
+            background-color: #111;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .benefit-item i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .main-footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .chat-action {
+            text-align: center;
+            padding: 4rem 0;
+            background: #111;
+        }
+        .chat-action h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .chat-action p {
+            color: #888;
+            margin-bottom: 2rem;
+        }
+        .btn-agendar {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-agendar:hover {
+            background: #eee;
+        }
+        .footer-sections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .footer-column h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-column ul li a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-column ul li a:hover {
+            color: #fff;
+        }
+        .footer-logo {
+            margin-bottom: 2rem;
+        }
+        .footer-logo img {
+            height: 40px;
+        }
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            text-align: center;
+        }
+        .footer-bottom p {
+            color: #888;
+        }
+        /* Hide AnythingLLM branding */
+        a[href*="AnythingLLM"],
+        div:has(> a[href*="AnythingLLM"]) {
+            display: none !important;
+        }
+        .chat-widget-powered-by {
+            display: none !important;
+        }
+        [class*="powered-by"] {
+            display: none !important;
+        }
+        .chat-action p {
+            color: #888;
+            margin-bottom: 2rem;
+        }
+        .btn-agendar {
+            background-color: #fff;
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn-agendar:hover {
+            background-color: #ddd;
+        }
+        /* Estilos do rodapé */
+        .main-footer {
+            background-color: #000;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .footer-logo img {
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .footer-column h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-column ul li a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-column ul li a:hover {
+            color: #fff;
+        }
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .footer-social a {
+            color: #888;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .footer-social a:hover {
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        window.difyChatbotConfig = {
+            token: '5GOvvTLls18sVnlU',
+            baseUrl: 'https://web-production-1c90.up.railway.app'
+        }
+    </script>
+    <script
+        src="https://web-production-1c90.up.railway.app/embed.min.js"
+        id="5GOvvTLls18sVnlU"
+        defer>
+    </script>
+    <style>
+        #dify-chatbot-bubble-button {
+            background-color: #1C64F2 !important;
+        }
+        #dify-chatbot-bubble-window {
+            width: 24rem !important;
+            height: 40rem !important;
+        }
+        /* Ocultar o "Powered by" */
+        .dify-powered-by {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.PNG" alt="AI Mentory Logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#solucoes">Soluções</a></li>
+                <li><a href="index.html#como-funciona">Como Funciona</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+            <div class="nav-social">
+                <a href="https://www.linkedin.com/company/106164330/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/wagneroliveira.ai/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="title">Career Mentory</h1>
+                <p class="subtitle">Seu mentor de carreira gratuito potencializado por IA</p>
+                <a href="https://web-production-1c90.up.railway.app/chat/5GOvvTLls18sVnlU" target="_blank" rel="noopener noreferrer" class="cta-button">Começar Agora</a>
+            </div>
+        </section>
+
+        
+
+        <section id="beneficios" class="benefits">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-robot"></i>
+                        <h3>IA Personalizada</h3>
+                        <p>Acesso a um assistente virtual especializado em desenvolvimento de carreira.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Disponível 24/7</h3>
+                        <p>Tire suas dúvidas a qualquer momento, sem necessidade de agendamento.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-brain"></i>
+                        <h3>Mentoria Inteligente</h3>
+                        <p>Receba orientações baseadas em dados e experiências reais do mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chat-action">
+            <div class="container">
+                <h2>Vamos Conversar?</h2>
+                <p>Descubra como podemos transformar seu negócio ou carreira com IA personalizada.</p>
+                <a href="https://linktr.ee/aimentory" target="_blank" rel="noopener noreferrer" class="cta-button-primary">Agendar Conversa</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="index.html#solucoes">Soluções</a></li>
+                        <li><a href="career.html">Carreira</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="index.html#solucoes">Mentoria</a></li>
+                        <li><a href="index.html#solucoes">Suporte 24/7</a></li>
+                        <li><a href="index.html#solucoes">Prompts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="index.html#contato">Fale Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AnythingLLM Chat Widget -->
+ 
+</body>
+</html>
